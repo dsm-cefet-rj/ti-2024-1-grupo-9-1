@@ -1,0 +1,85 @@
+.home{
+    width:100%;
+    height: 100vh;
+}
+.bg{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pageTitle{
+    font-size: 8.2vh;
+    color: #ffffff;
+    font-weight: 100;
+    margin-bottom: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.pageDescription{
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 2.05vh;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-top: 65vh;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color:rgba(0,0,0,.5);
+}
+.containerArrowDown{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    margin-top: 85vh;
+}
+.containerArrowDown:hover{
+    cursor: pointer;
+}
+.arrowDown{
+    color: #fff;
+    position: absolute;
+    animation: move 2.1s infinite ease-in-out;
+}
+
+video::-webkit-media-controls-start-playback-button {
+    display: none;
+}
+
+@keyframes move {
+    0%{margin-top: 0;}
+    50%{margin-top: 25px;}
+    100%{margin-top: 0;}
+}
+
+@media screen and (max-width:680px) {
+    .pageTitle{
+        font-size: 11.2vw;
+    }
+    .pageDescription{
+        font-size: 2.6vw;
+    }
+
+}
+
+
+

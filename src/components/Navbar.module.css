@@ -1,0 +1,258 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: .3s ease-in;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 145px;
+    display: flex;
+    align-items: center;
+    margin-right:40px;
+    margin-top: 10px;
+}
+
+.header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90%;
+    margin: auto;
+    height: 100%;
+    padding: 0 1rem;
+}
+
+.header .navMenu a {
+    color: #E4C576;
+    text-decoration: none;
+}
+.container img{
+    width: 100%;
+    height: auto;
+}
+
+Link{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.header .navMenu {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.header .navItem {
+    padding: 1rem;
+    font-weight: 300;
+}
+
+.header .navItem a:hover {
+    padding-bottom: 12px;
+    border-bottom: 3px solid #333334;
+    cursor:pointer;
+}
+
+.hamburger {
+    display: none;
+    color: #E4C576 !important;
+    width: 40px;
+    height: 50px;
+}
+
+.dropdownPortfolio{
+    min-width: 150px;
+    position: relative;
+}
+.dropdownPortfolio *{
+    box-sizing: border-box;
+}
+
+.menuPortfolio{
+    text-align: center;
+    top:10px;
+    display: none;
+    list-style:none;
+    padding: 0.2em 0.5em;
+    background: #282829;
+    border: 1px #333334 solid;
+    box-shadow: 0.05em 6px  rgba(0, 0, 0, 0.2);
+    border-radius:0.5em;
+    color: #E4C576;
+    font-weight: 300;
+    position: absolute;
+    left: 96%;
+    width: 200px;
+    margin-left: -70px;
+    transform: translateX(-50%);
+    transition: 0.2s;
+    z-index:1;
+}
+
+.menuPortfolio li{
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+    text-align: center;
+}
+.menuPortfolio li:hover{
+    background: #333334;
+}
+.header .navMenu .menuPortfolio a:hover{
+    border-bottom: 0;
+}
+
+.navItem:hover .menuPortfolio{
+    display: block;
+}
+
+.dropdown{
+    min-width: 150px;
+    position: relative;
+    margin: 2em;
+    margin-left: 10px;
+    margin-right: 0;
+}
+.dropdown *{
+    box-sizing: border-box;
+}
+.select{
+    color:#E4C576;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius:0.5em;
+    padding: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.selectClicked{
+    border: 2px #26489a solid;
+    box-shadow: 0 0 0.8em #26489a;
+}
+.select:hover{
+    background: #555;
+}
+.caret{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #E4C576;
+    transition:0.3s;
+}
+.caretRotate{
+    transform:rotate(180deg);
+}
+.menu{
+    list-style:none;
+    padding: 0.2em 0.5em;
+    background: #282829;
+    border: 1px #333334 solid;
+    box-shadow: 0.05em 6px  rgba(0, 0, 0, 0.2);
+    border-radius:0.5em;
+    color: #E4C576;
+    font-weight: 300;
+    position: absolute;
+    top: 3em;
+    left: 96%;
+    width: 100%;
+    margin-left: -70px;
+    transform: translateX(-50%);
+
+    transition: 0.2s;
+    z-index:1;
+}
+.menu li{
+    padding: 0.7em 0.5em;
+    margin: 0.3em 0;
+    border-radius: 0.5em;
+    cursor: pointer;
+    text-align: start;
+}
+.menu li:hover{
+    background: #333334;
+}
+
+.active{
+    background: #23242a;
+}
+.menuOpen{
+    display:block;
+    opacity: 1;
+}
+
+.languageButtonContainer{
+    display: none;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:1130px) {
+    .header .navMenu {
+        display: none;
+    }
+
+    .languageButtonContainer{
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        position: absolute;
+        bottom: 12px;
+    }
+
+    .languageButton{
+        width: 10vw;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .logo{
+        right: 0;
+        top: 10px;
+        margin-right: 0;
+        width: 100px;
+    }
+
+    .header {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .header .navbar {
+        max-width: 100%;
+    }
+
+    .hamburger {
+        display: block;
+        margin-top: 10px;
+            color: #E4C576 !important;
+        width: 40px;
+        height: 50px;
+        transform: rotateY(180deg)
+    }
+
+    .navItem {
+        margin: 10px;
+        font-size: 4vw;
+    }
+
+}

@@ -1,0 +1,40 @@
+{
+  "navBar": {
+    "language": "Português",
+    "home": "Home",
+    "UR": "Últimas Receitas",
+    "NU": "Nossos Utensílios",
+    "perfil": "Perfil"
+  },
+
+  "home": {
+    "title": "SolisCeitas",
+    "desc": "Descubra novos sabores"
+  },
+
+  "UR": {
+    "title": "Últimas Receitas"
+  },
+
+  "NU": {
+    "title": "Nossos Utensílios"
+  },
+
+  "Perfil": {
+    "title": "Perfil"
+  },
+
+  "Login": {
+    "title": "Login",
+    "desc": "Faça seu Login"
+  },
+
+  "Cadastro": {
+    "title": "Cadastro",
+    "desc": "Faça seu Cadastro"
+  },
+
+  "footer": {
+    "copyright": " todos os direitos reservados. 2024"
+  }
+}
