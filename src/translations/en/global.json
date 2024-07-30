@@ -1,3 +1,52 @@
 {
-
-}
+    "navBar": {
+      "language": "English",
+      "home": "Home",
+      "UR": "Last Recipes",
+      "NU": "Contact",
+      "perfil": "Profile"
+    },
+  
+    "home": {
+      "title": "SolisCeitas",
+      "desc": "Discover new tastes"
+    },
+  
+    "UR": {
+      "title": "Last Recipes",
+      "receita1": "Milk Pudding",
+      "receita2": "Sweet Rice",
+      "receita3": "Pave"
+    },
+  
+    "Contato": {
+      "title": "Contact",
+      "desc": "Are you a renowned chef and want to post a recipe? We're here to help!"
+    },
+  
+    "NU": {
+      "title": "Choose your ideal Subscription",
+      "desc": "We offer 15 days to ask for a refund, so there is no risk for you",
+      "mensal": "Monthly Subscription",
+      "trimestral": "Quarterly Subscription",
+      "anual": "Annual Subscription"
+    },
+  
+    "Perfil": {
+      "title": "Profile"
+    },
+  
+    "Login": {
+      "title": "Login",
+      "desc": "Sign in to your account"
+    },
+  
+    "Cadastro": {
+      "title": "Register",
+      "desc": "Register on the website"
+    },
+  
+    "footer": {
+      "copyright": " All rights reserved. 2024"
+    }
+  }

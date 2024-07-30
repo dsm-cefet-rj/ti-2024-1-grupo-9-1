@@ -74,7 +74,7 @@ function Navbar(){
                         <Link to ="UR" spy={true} smooth={true} offset={0} duration={1000}>{t("navBar.UR")}</Link>
                     </li>}
                     {isHome &&  <li className={styles.navItem}>
-                        <Link to ="NU" spy={true} smooth={true} offset={0} duration={1000}>{t("navBar.contato")}</Link>
+                        <Link to ="NU" spy={true} smooth={true} offset={0} duration={1000}>{t("navBar.Contato")}</Link>
                     </li>}
                     {isHome &&  <li className={styles.navItem}>
                         <LinkRouter to ="/perfil">{t("navBar.perfil")}</LinkRouter>
