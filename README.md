@@ -11,7 +11,14 @@ Primeiro o Fornecedor posta os itens disponíveis em estoque, e ao mesmo tempo o
 Usuário, Compras, Postagens, Fornecedor
  
 ## Casos de uso:
-Manutenção de perfil de Usuário – Manter Usuário, Efetuar Login
-Manutenção de Compras – Pesquisar Receitas, Pesquisar Utensílios, Comprar Receitas, Comprar Utensílios, Efetuar Pagamento, Avaliar Receita, Avaliar Utensílio, Emitir Relatório
-Manutenção de Postagens: Registrar Receita, Excluir Receita, Manter Receita
-Manutenção de perfil do Fornecedor – Registrar Utensílio, Manter Estoque, Excluir Utensílio
+#### Manutenção de perfil de Usuário –
+Manter Usuário, Efetuar Login
+
+#### Manutenção de Compras –
+Pesquisar Receitas, Pesquisar Utensílios, Comprar Receitas, Comprar Utensílios, Efetuar Pagamento, Avaliar Receita, Avaliar Utensílio, Emitir Relatório
+
+##### Manutenção de Postagens -
+Registrar Receita, Excluir Receita, Manter Receita
+
+##### Manutenção de perfil do Fornecedor – 
+Registrar Utensílio, Manter Estoque, Excluir Utensílio
