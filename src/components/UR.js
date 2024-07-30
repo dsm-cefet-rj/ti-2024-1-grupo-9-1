@@ -37,27 +37,19 @@ function UR(){
             <div className={styles.container}>
                 <div className={styles.urContainer}>
                     <img src={gray} className={styles.urImage} alt="Receita 1"/>
-                    <h3>Receita 1</h3>
+                    <h3>{t("UR.receita1")}</h3>
                 </div>
                 <div className={styles.urContainer}>
                     <img src={gray} className={styles.urImage} alt="Receita 2"/>
-                    <h3>Receita 2</h3>
+                    <h3>{t("UR.receita2")}</h3>
                 </div>
                 <div className={styles.urContainer}>
                     <img src={gray} className={styles.urImage} alt="Receita 3"/>
-                    <h3>Receita 3</h3>
-                </div>
-                <div className={styles.urContainer}>
-                    <img src={gray} className={styles.urImage} alt="Receita 4"/>
-                    <h3>Receita 4</h3>
-                </div>
-                <div className={styles.urContainer}>
-                    <img src={gray} className={styles.urImage} alt="Receita 5"/>
-                    <h3>Receita 5</h3>
+                    <h3>{t("UR.receita3")}</h3>
                 </div>
             </div>
 
-            <Link to="NU" spy={true} smooth={true} offset={0} duration={1000} className={styles.containerArrowDown}>
+            <Link to="Contato" spy={true} smooth={true} offset={0} duration={1000} className={styles.containerArrowDown}>
                 <FontAwesomeIcon icon={faAngleDown} className={styles.arrowDown}/>
             </Link>
         </section>

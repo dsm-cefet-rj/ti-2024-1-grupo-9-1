@@ -9,14 +9,15 @@ import Footer from "./components/Footer";
 import Perfil from "./components/Perfil";
 import Login from "./components/Login"
 import Cadastro from "./components/Cadastro"
+import Contato from "./components/Contato"
 
 
 function App() {
   return (
       <div className="container">
           <Routes>
-              <Route path='/' element={[<Navbar/>,<Home/>,<UR/>,<NU/>,<Footer/>]}/>
-              <Route path='/perfil' element={[<Navbar/>,<Perfil/>]}/>
+              <Route path='/' element={[<Navbar/>,<Home/>,<UR/>,<Contato/>,<Footer/>]}/>
+              <Route path='/perfil' element={[<Navbar/>,<NU/>]}/>
               <Route path='/login' element={[<Navbar/>,<Login/>]}/>
               <Route path='/cadastro' element={[<Navbar/>,<Cadastro/>]}/>
           </Routes>

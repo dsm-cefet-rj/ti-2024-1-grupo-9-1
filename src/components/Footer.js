@@ -1,7 +1,7 @@
 import styles from './Footer.module.css'
 import {useTranslation} from "react-i18next"
 import {Link} from 'react-scroll'
-import logo from "../assets/img/brasil2.png"
+import logo from "../assets/img/solislogo.png"
 import react from "react";
 
 function Footer(){

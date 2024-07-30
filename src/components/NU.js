@@ -2,7 +2,9 @@ import styles from './NU.module.css'
 import {useTranslation} from "react-i18next"
 import {Link} from 'react-scroll'
 import other from '../assets/img/other.png'
-import gray from "../assets/img/gray.png"
+import plan1 from "../assets/img/1.png"
+import plan2 from "../assets/img/2.png"
+import plan3 from "../assets/img/3.png"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
 
@@ -13,17 +15,21 @@ function NU(){
         <section id='NU' className={styles.nu}>
             <img className={styles.icon} src={other} alt="other"/>
             <h1 className={styles.pageTitle} style={{cursor:"auto"}}>{t("NU.title")}</h1>
+            <h3 className={styles.pageDescription} style={{cursor:"auto"}}>{t("NU.desc")}</h3>
             <div className={styles.container}>
                 <div className={styles.nuContainer}>
-                    <img src={gray} className={styles.nuImage} alt="Opção 1"/>
+                    <p className={styles.planos} style={{cursor:"auto"}}>{t("NU.mensal")}</p>
+                    <img src={plan1} className={styles.nuImage} alt="Opção 3"/>
                     <button className={styles.nuButton}>Comprar</button>
                 </div>
                 <div className={styles.nuContainer}>
-                    <img src={gray} className={styles.nuImage} alt="Opção 2"/>
+                    <p className={styles.planos} style={{cursor:"auto"}}>{t("NU.trimestral")}</p>
+                    <img src={plan2} className={styles.nuImage} alt="Opção 3"/>
                     <button className={styles.nuButton}>Comprar</button>
                 </div>
                 <div className={styles.nuContainer}>
-                    <img src={gray} className={styles.nuImage} alt="Opção 3"/>
+                    <p className={styles.planos} style={{cursor:"auto"}}>{t("NU.anual")}</p>
+                    <img src={plan3} className={styles.nuImage} alt="Opção 3"/>
                     <button className={styles.nuButton}>Comprar</button>
                 </div>
             </div>

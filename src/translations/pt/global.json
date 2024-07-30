@@ -3,7 +3,7 @@
     "language": "Português",
     "home": "Home",
     "UR": "Últimas Receitas",
-    "NU": "Nossos Utensílios",
+    "NU": "Entre em contato",
     "perfil": "Perfil"
   },
 
@@ -13,11 +13,23 @@
   },
 
   "UR": {
-    "title": "Últimas Receitas"
+    "title": "Últimas Receitas",
+    "receita1": "Pudim de leite",
+    "receita2": "Arroz doce",
+    "receita3": "Pave"
+  },
+
+  "Contato": {
+    "title": "Entre em Contato",
+    "desc": "É um chefe renomado e quer publicar sua receita? Estamos aqui para te ajudar!"
   },
 
   "NU": {
-    "title": "Nossos Utensílios"
+    "title": "Escolha o plano ideal para você",
+    "desc": "Oferecemos 15 dias para pedir reembolso, ou seja, risco zero para você",
+    "mensal": "Plano Mensal",
+    "trimestral": "Plano Trimestral",
+    "anual": "Plano Anual"
   },
 
   "Perfil": {
