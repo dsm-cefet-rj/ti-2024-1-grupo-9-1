@@ -22,3 +22,10 @@ Registrar Receita, Excluir Receita, Manter Receita
 
 ##### Manutenção de perfil do Fornecedor – 
 Registrar Utensílio, Manter Estoque, Excluir Utensílio
+
+
+<img src="/requisitosImages/crud.png">
+
+<img src="/requisitosImages/perfil.png">
+
+<img src="/requisitosImages/requisitos.png">
