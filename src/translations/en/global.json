@@ -3,7 +3,7 @@
       "language": "English",
       "home": "Home",
       "UR": "Last Recipes",
-      "NU": "Contact",
+      "Contato": "Contact Us",
       "perfil": "Profile"
     },
   
@@ -20,8 +20,15 @@
     },
   
     "Contato": {
-      "title": "Contact",
-      "desc": "Are you a renowned chef and want to post a recipe? We're here to help!"
+      "title": "Contact Us",
+      "desc": "Are you a renowned chef and want to post a recipe? We're here to help!",
+      "email": "Email",
+      "wpp": "Whatsapp",
+      "telefone": "Phone",
+      "solis": {
+        "tel": "+55 (21) 96948-3556",
+        "email": "contato@solisceitas.com.br"
+      }
     },
   
     "NU": {

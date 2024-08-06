@@ -3,7 +3,7 @@
     "language": "Português",
     "home": "Home",
     "UR": "Últimas Receitas",
-    "NU": "Entre em contato",
+    "Contato": "Entre em contato",
     "perfil": "Perfil"
   },
 
@@ -21,7 +21,14 @@
 
   "Contato": {
     "title": "Entre em Contato",
-    "desc": "É um chefe renomado e quer publicar sua receita? Estamos aqui para te ajudar!"
+    "desc": "É um chefe renomado e quer publicar sua receita? Estamos aqui para te ajudar!",
+    "email": "E-mail",
+    "wpp": "Whatsapp",
+    "telefone": "Telefone",
+    "solis": {
+      "tel": "(21) 96948-3556",
+      "email": "contato@solisceitas.com.br"
+    }
   },
 
   "NU": {

@@ -24,10 +24,10 @@ function Footer(){
                                 <Link to ="UR" spy={true} smooth={true} offset={0} duration={1000}>{t("navBar.UR")}</Link>
                             </li>
                             <li>
-                                <Link to ="NU" spy={true} smooth={true} offset={0} duration={1000}>{t("navBar.NU")}</Link>
+                                <Link to ="Contato" spy={true} smooth={true} offset={0} duration={1000}>{t("navBar.Contato")}</Link>
                             </li>
                             <li>
-                                <Link to ="perfil" spy={true} smooth={true} offset={0} duration={1000}>{t("navBar.perfil")}</Link>
+                                <Link to ="NU" spy={true} smooth={true} offset={0} duration={1000}>{t("navBar.perfil")}</Link>
                             </li>
                         </ul>
                     </div>

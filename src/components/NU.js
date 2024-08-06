@@ -1,7 +1,7 @@
 import styles from './NU.module.css'
 import {useTranslation} from "react-i18next"
 import {Link} from 'react-scroll'
-import other from '../assets/img/other.png'
+import diamond from "../assets/img/diamond.png";
 import plan1 from "../assets/img/1.png"
 import plan2 from "../assets/img/2.png"
 import plan3 from "../assets/img/3.png"
@@ -13,7 +13,7 @@ function NU(){
 
     return (
         <section id='NU' className={styles.nu}>
-            <img className={styles.icon} src={other} alt="other"/>
+            <img className={styles.icon} src={diamond} alt="other"/>
             <h1 className={styles.pageTitle} style={{cursor:"auto"}}>{t("NU.title")}</h1>
             <h3 className={styles.pageDescription} style={{cursor:"auto"}}>{t("NU.desc")}</h3>
             <div className={styles.container}>
