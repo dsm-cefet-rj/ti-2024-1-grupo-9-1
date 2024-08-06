@@ -105,16 +105,16 @@ function Navbar(){
                         <img src={uk} className={styles.languageButton} onClick={() => handleChangeLanguage("en")}/>
                     </div>
                     <li className={styles.navItem}>
-                        <Link to ="home" spy={true} smooth={true} offset={0} duration={1000} onClick={closeMenu}>{t("navBar.home")}</Link>
+                        <LinkRouter to ="/" spy={true} smooth={true} offset={0} duration={1000} onClick={closeMenu}>{t("navBar.home")}</LinkRouter>
                     </li>
                     {isHome &&  <li className={styles.navItem}>
                         <Link to ="UR" spy={true} smooth={true} offset={0} duration={1000} onClick={closeMenu}>{t("navBar.UR")}</Link>
                     </li>}
                     {isHome &&  <li className={styles.navItem}>
-                        <Link to ="NU" spy={true} smooth={true} offset={0} duration={1000} onClick={closeMenu}>{t("navBar.NU")}</Link>
+                        <Link to ="Contato" spy={true} smooth={true} offset={0} duration={1000} onClick={closeMenu}>{t("navBar.Contato")}</Link>
                     </li>}
                     {isHome &&  <li className={styles.navItem}>
-                        <Link to ="perfil" spy={true} smooth={true} offset={0} duration={1000} onClick={closeMenu}>{t("navBar.perfil")}</Link>
+                        <LinkRouter to ="/perfil" spy={true} smooth={true} offset={0} duration={1000} onClick={closeMenu}>{t("navBar.perfil")}</LinkRouter>
                     </li>}
                 </ul>
             </nav>

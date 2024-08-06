@@ -10,10 +10,24 @@
     justify-content: start;
 }
 
+p{
+    color: white;
+}
+
+.autorTitle{
+    padding-top: 30px;
+    font-size: 7vh;
+    color: #E4C576;
+    font-weight: 50;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+}
 
 .pageTitle{
-    padding-top: 15px;
-    font-size: 5.2vh;
+    padding-top: 5px;
+    font-size: 4vh;
     color: #E4C576;
     font-weight: 50;
     margin-bottom: 30px;
@@ -60,10 +74,29 @@
 .container{
     margin-top: 60px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 90%;
+}
+
+.ingredienteContainer{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 70%;
+}
+
+.modoPrepContainer{
+    margin-top: 60px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 70%;
 }
 
 .urContainer{

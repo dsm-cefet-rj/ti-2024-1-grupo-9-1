@@ -14,9 +14,9 @@
   
     "UR": {
       "title": "Last Recipes",
-      "receita1": "Milk Pudding",
-      "receita2": "Sweet Rice",
-      "receita3": "Pave"
+      "receita1": "Fillet au poivre",
+      "receita2": "Stuffed Pork",
+      "receita3": "Petit Gateau"
     },
   
     "Contato": {
@@ -36,8 +36,30 @@
       "desc": "We offer 15 days to ask for a refund, so there is no risk for you",
       "mensal": "Monthly Subscription",
       "trimestral": "Quarterly Subscription",
-      "anual": "Annual Subscription"
+      "anual": "Annual Subscription",
+      "compra": "Purchase"
     },
+
+  "Receita1": {
+    "title": "Fillet au poivre",
+    "autor": "Paola Carosella",
+    "ingredientes": "Ingredients",
+    "modoPrep": "Method of preparation"
+  },
+
+  "Receita2": {
+    "title": "Filé de Porco Recheado",
+    "autor": "Gordon Ramsay",
+    "ingredientes": "Ingredients",
+    "modoPrep": "Method of preparation"
+  },
+
+  "Receita3": {
+    "title": "Petit gateau",
+    "autor": "Érick Jacquin",
+    "ingredientes": "Ingredients",
+    "modoPrep": "Method of preparation"
+  },
   
     "Perfil": {
       "title": "Profile"

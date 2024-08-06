@@ -14,9 +14,9 @@
 
   "UR": {
     "title": "Últimas Receitas",
-    "receita1": "Pudim de leite",
-    "receita2": "Arroz doce",
-    "receita3": "Pave"
+    "receita1": "Fillet au poivre",
+    "receita2": "Filé de Porco Recheado",
+    "receita3": "Petit Gateau"
   },
 
   "Contato": {
@@ -36,7 +36,29 @@
     "desc": "Oferecemos 15 dias para pedir reembolso, ou seja, risco zero para você",
     "mensal": "Plano Mensal",
     "trimestral": "Plano Trimestral",
-    "anual": "Plano Anual"
+    "anual": "Plano Anual",
+    "compra": "Comprar"
+  },
+
+  "Receita1": {
+    "title": "Fillet au poivre",
+    "autor": "Paola Carosella",
+    "ingredientes": "Ingredientes",
+    "modoPrep": "Modo de Preparo"
+  },
+
+  "Receita2": {
+    "title": "Filé de Porco Recheado",
+    "autor": "Gordon Ramsay",
+    "ingredientes": "Ingredientes",
+    "modoPrep": "Modo de Preparo"
+  },
+
+  "Receita3": {
+    "title": "Petit gateau",
+    "autor": "Érick Jacquin",
+    "ingredientes": "Ingredientes",
+    "modoPrep": "Modo de Preparo"
   },
 
   "Perfil": {

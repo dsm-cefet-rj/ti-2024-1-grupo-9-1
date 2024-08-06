@@ -20,17 +20,17 @@ function NU(){
                 <div className={styles.nuContainer}>
                     <p className={styles.planos} style={{cursor:"auto"}}>{t("NU.mensal")}</p>
                     <img src={plan1} className={styles.nuImage} alt="Opção 3"/>
-                    <button className={styles.nuButton}>Comprar</button>
+                    <button className={styles.nuButton}>{t("NU.compra")}</button>
                 </div>
                 <div className={styles.nuContainer}>
                     <p className={styles.planos} style={{cursor:"auto"}}>{t("NU.trimestral")}</p>
                     <img src={plan2} className={styles.nuImage} alt="Opção 3"/>
-                    <button className={styles.nuButton}>Comprar</button>
+                    <button className={styles.nuButton}>{t("NU.compra")}</button>
                 </div>
                 <div className={styles.nuContainer}>
                     <p className={styles.planos} style={{cursor:"auto"}}>{t("NU.anual")}</p>
                     <img src={plan3} className={styles.nuImage} alt="Opção 3"/>
-                    <button className={styles.nuButton}>Comprar</button>
+                    <button className={styles.nuButton}>{t("NU.compra")}</button>
                 </div>
             </div>
         </section>
