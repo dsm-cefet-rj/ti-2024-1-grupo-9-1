@@ -1,0 +1,118 @@
+.homeSection {
+    background: #282829;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.searchInput {
+    width: 70%;
+    padding: 10px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: #282829;
+    margin-bottom: 20px;
+}
+
+.searchInput::placeholder {
+    color: #A6A6A6;
+}
+
+.searchButton {
+    padding: 10px 20px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin-left: 10px;
+    background-color: #E4C576;
+    color: #282829;
+    cursor: pointer;
+}
+
+.searchButton:hover {
+    background-color: #caa54b;
+}
+
+.categorySelect {
+    width: 50%;
+    padding: 10px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: #282829;
+    background-color: #E4C576;
+    margin-bottom: 20px;
+}
+
+.receitaList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.receitaCard {
+    background: #3a3a3c;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.2s;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+
+.receitaCard:hover {
+    transform: scale(1.05);
+}
+
+.receitaImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.receitaTitle {
+    color: #E4C576;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .searchInput {
+        width: 60%;
+    }
+
+    .categorySelect {
+        width: 70%;
+    }
+
+    .receitaCard {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .searchInput {
+        width: 55%;
+    }
+
+    .searchButton {
+        font-size: 1.2em;
+        padding: 10px 15px;
+    }
+
+    .receitaTitle {
+        font-size: 1.2em;
+    }
+
+    .receitaCard {
+        width: 100%;
+    }
+}

@@ -1,0 +1,51 @@
+.ratingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.ratingContainer select,
+.ratingContainer textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.ratingContainer button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #E4C576;
+    color: #282829;
+    border: none;
+    border-radius: 5px;
+}
+
+.receitaDetailContainer {
+    padding: 20px;
+}
+
+.receitaDetailContainer h1 {
+    color: #E4C576;
+}
+
+.receitaDetailContainer p {
+    color: #A6A6A6;
+}
+
+.receitaDetailContainer img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.receitaDetailContainer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.receitaDetailContainer li {
+    margin-bottom: 10px;
+}
