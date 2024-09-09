@@ -1,21 +1,55 @@
 import { Link } from 'react-router-dom';
-import { receitas } from './receitas';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 import styles from './TodasReceitas.module.css'; // Importação do arquivo de estilo
 
 function TodasReceitas() {
     const [search, setSearch] = useState('');
     const [category, setCategory] = useState('');
-    const [filteredReceitas, setFilteredReceitas] = useState(receitas);
+    const [filteredReceitas, setFilteredReceitas] = useState([]);
+    const [allReceitas, setAllReceitas] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchReceitas = async () => {
+            try {
+                const token = localStorage.getItem('token'); // Recupera o token do localStorage
+                const response = await axios.get('http://localhost:5000/recipes', {
+                    headers: {
+                        Authorization: `Bearer ${token}` // Adiciona o token ao cabeçalho da requisição
+                    }
+                });
+                setAllReceitas(response.data);
+                setFilteredReceitas(response.data);
+                setLoading(false);
+            } catch (error) {
+                if (error.response) {
+                    setError('Failed to fetch recipes');
+                } else if (error.request) {
+                    console.error('Request error:', error.request);
+                } else {
+                    console.error('Error message:', error.message);
+                }
+                setLoading(false);
+            }
+        };
+
+        fetchReceitas();
+    }, []);
 
     const handleSearch = () => {
-        const filtered = receitas.filter(receita => {
+        const filtered = allReceitas.filter(receita => {
             const matchesSearch = receita.title.toLowerCase().includes(search.toLowerCase());
             const matchesCategory = category === '' || category === 'Todas as Categorias' || receita.category === category;
             return matchesSearch && matchesCategory;
         });
         setFilteredReceitas(filtered);
     };
+
+    useEffect(() => {
+        handleSearch();
+    }, [search, category, allReceitas]);
 
     const handleKeyPress = (e) => {
         if (e.key === 'Enter') {
@@ -28,9 +62,13 @@ function TodasReceitas() {
         handleSearch(); // Aplica o filtro automaticamente ao mudar a categoria
     };
 
-    useEffect(() => {
-        handleSearch();
-    }, [search, category]);
+    if (loading) {
+        return <p>Loading...</p>;
+    }
+
+    if (error) {
+        return <p>{error}</p>;
+    }
 
     return (
         <div className={styles.TodasReceitasSection}>
@@ -57,8 +95,8 @@ function TodasReceitas() {
             <div className={styles.receitaList}>
                 {filteredReceitas.map(receita => (
                     <Link 
-                        to={`/receita/${receita.id}`} 
-                        key={receita.id}
+                        to={`/recipes/${receita._id}`}  // Usando o _id gerado pelo MongoDB
+                        key={receita._id}
                         style={{ textDecoration: 'none' }} // Remove o sublinhado
                     >
                         <div className={styles.receitaCard}>

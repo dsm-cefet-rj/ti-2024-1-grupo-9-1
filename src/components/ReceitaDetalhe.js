@@ -1,24 +1,42 @@
 import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import Receita from './Receita';
-import { receitas } from './receitas';
 import Rating from './Rating';
-import { useState } from 'react';
 
 function ReceitaDetalhe() {
-    const { id } = useParams();
-    const receita = receitas.find(receita => receita.id === parseInt(id));
-    const [ratings, setRatings] = useState([]);
+    const { id } = useParams(); 
+    const [receita, setReceita] = useState(null);
+    const [averageRating, setAverageRating] = useState('');
+    const [error, setError] = useState(null);
 
-    const handleRatingSubmit = (newRating) => {
-        setRatings([...ratings, newRating]);
-    };
+    useEffect(() => {
+        const fetchReceita = async () => {
+            try {
+                const token = localStorage.getItem('token'); 
+                const response = await axios.get(`http://localhost:5000/recipes/${id}`, {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                setReceita(response.data.recipe); 
+                setAverageRating(response.data.averageRating); 
+            } catch (error) {
+                setError('Erro ao carregar a receita');
+            }
+        };
+
+        fetchReceita();
+    }, [id]);
 
     if (!receita) {
-        return <h2>Receita não encontrada</h2>;
+        return <h2>{error || 'Carregando...'}</h2>;
     }
 
     return (
-        <>
+        <>  
+            <h3 style={{ fontSize: '1.8em', paddingTop: '30px' }}>Avaliação média: {averageRating}</h3>
+
             <Receita
                 autor={receita.autor}
                 title={receita.title}
@@ -26,19 +44,7 @@ function ReceitaDetalhe() {
                 ingredientes={receita.ingredientes}
                 modoPreparo={receita.modoPreparo}
             />
-            <Rating onRatingSubmit={handleRatingSubmit} />
-            <div>
-                <h2>Avaliações:</h2>
-                {ratings.length > 0 ? (
-                    <ul>
-                        {ratings.map((rating, index) => (
-                            <li key={index}>{`Avaliação ${index + 1}: ${rating} estrelas`}</li>
-                        ))}
-                    </ul>
-                ) : (
-                    <p>Seja o primeiro a avaliar esta receita!</p>
-                )}
-            </div>
+            <Rating recipeId={id} />
         </>
     );
 }

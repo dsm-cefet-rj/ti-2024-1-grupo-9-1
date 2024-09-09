@@ -10,9 +10,6 @@ import Perfil from "./components/Perfil";
 import Login from "./components/Login"
 import Cadastro from "./components/Cadastro"
 import Contato from "./components/Contato"
-import Receita1 from "./components/Receita1"
-import Receita2 from "./components/Receita2"
-import Receita3 from "./components/Receita3"
 import ReceitaDetalhe from "./components/ReceitaDetalhe"
 import TodasReceitas from "./components/TodasReceitas"
 
@@ -25,11 +22,8 @@ function App() {
               <Route path='/perfil' element={[<Navbar/>,<NU/>]}/>
               <Route path='/login' element={[<Navbar/>,<Login/>]}/>
               <Route path='/cadastro' element={[<Navbar/>,<Cadastro/>]}/>
-              <Route path="/receita/:id" element={<ReceitaDetalhe />} />
-              <Route path="/receitas" element={<TodasReceitas />} />
-              <Route path='/receita1' element={[<Navbar/>,<Receita1/>, <Footer/>]}/>
-              <Route path='/receita2' element={[<Navbar/>,<Receita2/>, <Footer/>]}/>
-              <Route path='/receita3' element={[<Navbar/>,<Receita3/>, <Footer/>]}/>
+              <Route path="/recipes/:id" element={<ReceitaDetalhe />} />
+              <Route path="/recipes" element={<TodasReceitas />} />
           </Routes>
       </div>
 
