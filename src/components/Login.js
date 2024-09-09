@@ -1,34 +1,52 @@
-import styles from './Perfil.module.css'
-import {useTranslation} from "react-i18next"
-import {Link} from 'react-scroll'
-import other from '../assets/img/other.png'
-import gray from "../assets/img/gray.png"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
-import {Link as LinkRouter} from "react-router-dom";
+import React, { useState } from 'react';
+import axios from 'axios';
 
-function Login(){
-    const [t, i18n] = useTranslation("global");
+const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-    return (
-        <section id='Login' className={styles.login}>
-            <h1 className={styles.pageTitle} style={{cursor:"auto"}}>{t("Login.title")}</h1>
-            <div className={styles.container}>
-                <form action="">
-                    <h3 className={styles.loginDesc}>{t("Login.desc")}</h3>
-                    <div className={styles.formHolder}>
-                        <input type="text" className={styles.formControl} placeholder="Username"/>
-                    </div>
-                    <div className={styles.formControl}>
-                        <input type="password" className="form-control" placeholder="Password"/>
-                    </div>
-                    <button className={styles.formButton}>
-                        <span>Login</span>
-                    </button>
-                </form>
-            </div>
-        </section>
-    )
-}
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-export default Login
+    try {
+      const response = await axios.post('http://localhost:5000/auth/login', { email, password });
+      localStorage.setItem('token', response.data.token); // Salva o token no localStorage
+      console.log('Login successful:', response.data);
+    } catch (error) {
+      if (error.response) {
+        console.error('Login error response data:', error.response.data);
+        console.error('Login error response status:', error.response.status);
+      } else if (error.request) {
+        console.error('Login error request:', error.request);
+      } else {
+        console.error('Login error message:', error.message);
+      }
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label>Email:</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+      </div>
+      <div>
+        <label>Password:</label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+      </div>
+      <button type="submit">Login</button>
+    </form>
+  );
+};
+
+export default Login;

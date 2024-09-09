@@ -1,43 +1,88 @@
-import styles from './Perfil.module.css'
-import {useTranslation} from "react-i18next"
-import {Link} from 'react-scroll'
-import other from '../assets/img/other.png'
-import gray from "../assets/img/gray.png"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
-import {Link as LinkRouter} from "react-router-dom";
+import React, { useState } from 'react';
+import axios from 'axios';
+import styles from './Cadastro.module.css'; // Importe o arquivo de estilos
 
-function Cadastro(){
-    const [t, i18n] = useTranslation("global");
+const Cadastro = () => {
+    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (password !== confirmPassword) {
+            setError('As senhas não correspondem.');
+            return;
+        }
+
+        try {
+            const response = await axios.post('http://localhost:5000/auth/register', {
+                username,
+                email,
+                password
+            });
+            setSuccess('Registro bem-sucedido!');
+            setUsername('');
+            setEmail('');
+            setPassword('');
+            setConfirmPassword('');
+        } catch (error) {
+            setError('Erro ao registrar. Tente novamente.');
+        }
+    };
 
     return (
-        <section id='Cadastro' className={styles.cadastro}>
-            <h1 className={styles.pageTitle} style={{cursor:"auto"}}>{t("Cadastro.title")}</h1>
-            <div className={styles.container}>
-                <form action="">
-                    <h3>{t("Cadastro.desc")}</h3>
-                    <div className="form-holder">
-                        <input type="text" className="form-control" placeholder="Username"/>
-                    </div>
-                    <div className="form-holder">
-                        <input type="text" className="form-control" placeholder="Phone Number"/>
-                    </div>
-                    <div className="form-holder">
-                        <input type="text" className="form-control" placeholder="E-Mail"/>
-                    </div>
-                    <div className="form-holder">
-                        <input type="password" className="form-control" placeholder="Password"/>
-                    </div>
-                    <div className="form-holder">
-                        <input type="password" className="form-control" placeholder="Confirm Password"/>
-                    </div>
-                    <button>
-                        <span>Register</span>
-                    </button>
-                </form>
-            </div>
-        </section>
-    )
-}
+        <div className={styles.container}>
+            <h2 className={styles.title}>Registrar</h2>
+            {error && <p className={styles.error}>{error}</p>}
+            {success && <p className={styles.success}>{success}</p>}
+            <form onSubmit={handleSubmit} className={styles.form}>
+                <div className={styles.formGroup}>
+                    <label htmlFor="username">Nome de Usuário:</label>
+                    <input
+                        type="text"
+                        id="username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        required
+                    />
+                </div>
+                <div className={styles.formGroup}>
+                    <label htmlFor="email">Email:</label>
+                    <input
+                        type="email"
+                        id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                </div>
+                <div className={styles.formGroup}>
+                    <label htmlFor="password">Senha:</label>
+                    <input
+                        type="password"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+                </div>
+                <div className={styles.formGroup}>
+                    <label htmlFor="confirmPassword">Confirmar Senha:</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                        required
+                    />
+                </div>
+                <button type="submit" className={styles.submitButton}>Registrar</button>
+            </form>
+        </div>
+    );
+};
 
-export default Cadastro
+export default Cadastro;

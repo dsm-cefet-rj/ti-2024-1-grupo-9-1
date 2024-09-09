@@ -1,10 +1,10 @@
 export const receitas = [
     {
         id: 1,
-        autor: "Nome do Autor",
-        title: "Nome da Receita",
+        autor: "Paola",
+        title: "Pudinzinho",
         videoUrl: "https://www.youtube.com/embed/uEO6cj3UoJE?si=npF4PE8iYYcnMVMF",
-        imageUrl: "path/to/image1.jpg", // Adicione o caminho para a imagem
+        imageUrl: "path/to/image1.jpg",
         category: "Sobremesa",
         ingredientes: [
             "3 filés de aprox. 220g de bife ancho",
@@ -20,10 +20,10 @@ export const receitas = [
     },
     {
         id: 2,
-        autor: "Nome do Autor",
-        title: "Nome da Receita",
+        autor: "Jaquin",
+        title: "Não sei",
         videoUrl: "https://www.youtube.com/embed/uEO6cj3UoJE?si=npF4PE8iYYcnMVMF",
-        imageUrl: "path/to/image1.jpg", // Adicione o caminho para a imagem
+        imageUrl: "path/to/image1.jpg",
         category: "Prato Principal",
         ingredientes: [
             "3 filés de aprox. 220g de bife ancho",
@@ -39,10 +39,10 @@ export const receitas = [
     },
     {
         id: 3,
-        autor: "Nome do Autor",
-        title: "Nome da Receita",
+        autor: "fogarel",
+        title: "arroz",
         videoUrl: "https://www.youtube.com/embed/uEO6cj3UoJE?si=npF4PE8iYYcnMVMF",
-        imageUrl: "path/to/image1.jpg", // Adicione o caminho para a imagem
+        imageUrl: "path/to/image1.jpg",
         category: "Entrada",
         ingredientes: [
             "3 filés de aprox. 220g de bife ancho",
@@ -61,7 +61,7 @@ export const receitas = [
         autor: "Nome do Autor",
         title: "Nome da Receita",
         videoUrl: "https://www.youtube.com/embed/uEO6cj3UoJE?si=npF4PE8iYYcnMVMF",
-        imageUrl: "path/to/image1.jpg", // Adicione o caminho para a imagem
+        imageUrl: "path/to/image1.jpg",
         category: "Prato Principal",
         ingredientes: [
             "3 filés de aprox. 220g de bife ancho",
