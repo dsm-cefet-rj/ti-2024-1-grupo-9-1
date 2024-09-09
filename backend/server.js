@@ -30,6 +30,7 @@ app.use('/auth', authRoutes);
 app.use('/recipes', recipeRoutes);
 app.use('/ratings', ratingRoutes);
 
+
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });

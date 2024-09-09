@@ -1,51 +1,65 @@
 .ratingContainer {
+    background: #282829;
+    width: 90%;
+    max-width: 2000px;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-top: 20px;
-}
-
-.ratingContainer select,
-.ratingContainer textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
-}
-
-.ratingContainer button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #E4C576;
-    color: #282829;
-    border: none;
-    border-radius: 5px;
-}
-
-.receitaDetailContainer {
-    padding: 20px;
-}
-
-.receitaDetailContainer h1 {
+    align-items: center;
     color: #E4C576;
 }
 
-.receitaDetailContainer p {
-    color: #A6A6A6;
+.ratingContainer h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-.receitaDetailContainer img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
+.starRating {
+    display: flex;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
-.receitaDetailContainer ul {
-    list-style-type: none;
-    padding: 0;
+.star {
+    font-size: 3em;
+    cursor: pointer;
+    color: #A6A6A6;
+    transition: color 0.2s ease;
 }
 
-.receitaDetailContainer li {
-    margin-bottom: 10px;
+.star.filled {
+    color: #E4C576;
+}
+
+textarea {
+    width: 100%;
+    height: 60px;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #A6A6A6;
+    background: #333;
+    color: #E4C576;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+button {
+    background: #E4C576;
+    color: #282829;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #d4b453;
+}
+
+p {
+    margin: 10px 0;
 }

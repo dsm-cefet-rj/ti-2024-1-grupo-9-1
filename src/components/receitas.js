@@ -21,7 +21,7 @@ export const receitas = [
     {
         id: 2,
         autor: "Jaquin",
-        title: "Não sei",
+        title: "Teste, estou mt triste",
         videoUrl: "https://www.youtube.com/embed/uEO6cj3UoJE?si=npF4PE8iYYcnMVMF",
         imageUrl: "path/to/image1.jpg",
         category: "Prato Principal",

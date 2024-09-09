@@ -95,8 +95,8 @@ function TodasReceitas() {
             <div className={styles.receitaList}>
                 {filteredReceitas.map(receita => (
                     <Link 
-                        to={`/recipes/${receita.id}`} 
-                        key={receita.id}
+                        to={`/recipes/${receita._id}`}  // Usando o _id gerado pelo MongoDB
+                        key={receita._id}
                         style={{ textDecoration: 'none' }} // Remove o sublinhado
                     >
                         <div className={styles.receitaCard}>
