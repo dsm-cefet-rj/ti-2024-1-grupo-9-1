@@ -22,8 +22,8 @@ function App() {
               <Route path='/perfil' element={[<Navbar/>,<NU/>]}/>
               <Route path='/login' element={[<Navbar/>,<Login/>]}/>
               <Route path='/cadastro' element={[<Navbar/>,<Cadastro/>]}/>
-              <Route path="/recipes/:id" element={<ReceitaDetalhe />} />
-              <Route path="/recipes" element={<TodasReceitas />} />
+              <Route path="/recipes/:id" element={[<Navbar/>,<ReceitaDetalhe/>]} />
+              <Route path="/recipes" element={[<Navbar/>,<TodasReceitas/>]} />
           </Routes>
       </div>
 

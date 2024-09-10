@@ -20,8 +20,12 @@ function TodasReceitas() {
                         Authorization: `Bearer ${token}` // Adiciona o token ao cabeçalho da requisição
                     }
                 });
-                setAllReceitas(response.data);
-                setFilteredReceitas(response.data);
+                if (Array.isArray(response.data)) {
+                    setAllReceitas(response.data);
+                    setFilteredReceitas(response.data);
+                } else {
+                    throw new Error('Invalid data format');
+                }
                 setLoading(false);
             } catch (error) {
                 if (error.response) {
@@ -39,8 +43,11 @@ function TodasReceitas() {
     }, []);
 
     const handleSearch = () => {
+        console.log('All receitas:', allReceitas); // Debugging
         const filtered = allReceitas.filter(receita => {
-            const matchesSearch = receita.title.toLowerCase().includes(search.toLowerCase());
+            console.log('Receita:', receita); // Debugging
+            const title = receita.title || ''; // Verifica se title é uma string
+            const matchesSearch = title.toLowerCase().includes(search.toLowerCase());
             const matchesCategory = category === '' || category === 'Todas as Categorias' || receita.category === category;
             return matchesSearch && matchesCategory;
         });
@@ -72,16 +79,17 @@ function TodasReceitas() {
 
     return (
         <div className={styles.TodasReceitasSection}>
-            <input
-                type="text"
-                className={styles.searchInput}
-                placeholder="Pesquisar receitas..."
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                onKeyPress={handleKeyPress}
-            />
-            <button className={styles.searchButton} onClick={handleSearch}>OK</button>
-            <select
+            <div className={styles.searchBox} >
+                <input
+                    type="text"
+                    className={styles.searchInput}
+                    placeholder="Pesquisar receitas..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                />
+                <button className={styles.searchButton} onClick={handleSearch}>OK</button>
+                <select
                 className={styles.categorySelect}
                 onChange={handleCategoryChange}
                 value={category}
@@ -91,6 +99,8 @@ function TodasReceitas() {
                 <option value="Prato Principal">Prato Principal</option>
                 <option value="Entrada">Entrada</option>
             </select>
+            </div>
+            
 
             <div className={styles.receitaList}>
                 {filteredReceitas.map(receita => (
