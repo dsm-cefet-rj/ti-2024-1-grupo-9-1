@@ -19,7 +19,8 @@ function App() {
       <div className="container">
           <Routes>
               <Route path='/' element={[<Navbar/>,<Home/>,<UR/>,<Contato/>,<Footer/>]}/>
-              <Route path='/perfil' element={[<Navbar/>,<NU/>]}/>
+              <Route path='/perfil' element={[<Navbar/>,<Perfil/>]}/>
+              <Route path='/compras' element={[<Navbar/>,<NU/>]}/>
               <Route path='/login' element={[<Navbar/>,<Login/>]}/>
               <Route path='/cadastro' element={[<Navbar/>,<Cadastro/>]}/>
               <Route path="/recipes/:id" element={[<Navbar/>,<ReceitaDetalhe/>]} />

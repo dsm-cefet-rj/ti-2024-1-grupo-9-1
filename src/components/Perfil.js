@@ -1,23 +1,29 @@
-import styles from './Perfil.module.css'
-import {useTranslation} from "react-i18next"
-import {Link} from 'react-scroll'
-import other from '../assets/img/other.png'
-import gray from "../assets/img/gray.png"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
-import {Link as LinkRouter} from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { fetchUserProfile } from '../utils/auth';
 
-function Perfil(){
-    const [t, i18n] = useTranslation("global");
+const UserProfile = () => {
+    const [user, setUser] = useState(null);
+
+    useEffect(() => {
+        const getUserProfile = async () => {
+            const profile = await fetchUserProfile();
+            if (profile) {
+                setUser(profile);
+            }
+        };
+
+        getUserProfile();
+    }, []);
+
+    if (!user) return <p>Loading...</p>;
 
     return (
-        <section id='Perfil' className={styles.perfil}>
-            <img className={styles.icon} src={other} alt="other"/>
-            <h1 className={styles.pageTitle} style={{cursor:"auto"}}>{t("Perfil.title")}</h1>
-            <div className={styles.container}>
-            </div>
-        </section>
-    )
-}
+        <div>
+            <h1>Profile</h1>
+            <p>Welcome, {user.username}!</p>
+            <p>{user.pagante ? 'Plano Pagante' : 'Plano Gratuito'}</p>
+        </div>
+    );
+};
 
-export default Perfil
+export default UserProfile;
