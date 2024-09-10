@@ -116,3 +116,18 @@
     50% { transform: translateY(10px); }
     100% { transform: translateY(0); }
 }
+
+.signupPrompt {
+    margin-top: 100px;
+    color: #E4C576;
+}
+
+.signupLink {
+    color: #E4C576;
+    text-decoration: none;
+
+}
+
+.signupLink:hover {
+    text-decoration: underline;
+}

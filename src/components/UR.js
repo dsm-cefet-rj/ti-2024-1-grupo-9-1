@@ -7,6 +7,7 @@ import diamond from '../assets/img/diamond.png';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import gray from "../assets/img/gray.png";
+import { Link as LinkRouter, useNavigate } from 'react-router-dom';
 
 function UR() {
     const [t] = useTranslation("global");
@@ -53,6 +54,9 @@ function UR() {
             <Link to="Contato" spy={true} smooth={true} offset={0} duration={1000} className={styles.containerArrowDown}>
                 <FontAwesomeIcon icon={faAngleDown} className={styles.arrowDown}/>
             </Link>
+            <a className={styles.signupPrompt}>
+                <LinkRouter to="/recipes" className={styles.signupLink}>Lista com todas as receitas!</LinkRouter>
+            </a>
         </section>
     );
 }

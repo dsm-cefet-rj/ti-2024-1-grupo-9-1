@@ -1,219 +1,86 @@
-.login{
-    background: #282829;
-    width: 100%;
+html, body {
     height: 100%;
-    min-height: 100vh;
-    top:0;
+    margin: 0;
+}
+
+.container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: start;
-}
-
-
-.loginDesc{
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-
-.formHolder{
-    margin-bottom: 20px;
-}
-
-
-.formControl{
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-
-.formButton{
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.formButton:hover{
-    background-color: #0056b3;
-}
-
-.pageTitle{
-    padding-top: 15px;
-    font-size: 5.2vh;
-    color: #E4C576;
-    font-weight: 100;
-    margin-bottom: 30px;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-
-}
-
-.pageTitleActive{
-    padding-top: 15px;
-    font-size: 5.2vh;
-    color: #E4C576;
-    font-weight: 100;
-    margin-bottom: 30px;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    border-bottom: 2px solid #E4C576;
-}
-
-.pageTitle:hover{
-    cursor: pointer;
-}
-
-.pageTitleActive:hover{
-    cursor: pointer;
-}
-
-.pageDescription{
-    padding-bottom: 70px;
-    text-align: center;
-    font-size: 1.25em;
-    color: #A6A6A6;
-    max-width: 70%;
-    margin: 0 auto;
-    font-weight: 300;
-}
-
-.icon{
-    padding-top: 70px;
-    width: 4vh;
-    height: auto;
-}
-
-.container{
-    margin-top: 60px;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+}
+
+.title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #E4C576;
+}
+
+.form {
+    background: #282829;
     width: 90%;
-}
-
-.loginContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.loginImage{
-    width:200px;
-    height:200px;
-    margin-bottom: 20px;
-}
-
-
-.item{
-    min-width: 33%;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    color: #E4C576;
 }
 
-h2{
-    padding-top: 30px;
-    text-align: center;
-    font-weight: 300;
-    color: #A6A6A6;
-    font-size: 1.25em;
+.formGroup {
+    width: 90%;
+    margin-bottom: 15px;
 }
 
-h3{
-    text-align: center;
-    font-weight: 300;
-    color: #A6A6A6;
-    font-size: 1em;
-    margin-bottom: 30px;
+label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    display: block;
+    color: #E4C576;
 }
 
-.containerArrowDown{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50px;
-    width: 50px;
-    margin-top: 85vh;
+input {
+    width: 95%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #A6A6A6;
+    background: #333;
+    color: #E4C576;
+    font-size: 1.1em;
 }
-.containerArrowDown:hover{
+
+.submitButton {
+    background: #E4C576;
+    color: #282829;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1.2em;
     cursor: pointer;
-}
-.arrowDown{
-    color: #fff;
-    position: absolute;
-    animation: move 2.1s infinite ease-in-out;
-}
-
-.pageTopic{
-    display:none;
+    transition: background 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+    margin-top: 10px;
 }
 
-.description{
-    margin-top: 100px;
-    font-size:1.5em;
-    display: none;
+.submitButton:hover {
+    background: #d4b453;
 }
 
-.descriptionActive{
-    margin-top: 100px;
-    font-size:1.5em;
+.signupPrompt {
+    margin-top: 15px;
+    color: #E4C576;
 }
 
-@media screen and (max-width:1200px) {
+.signupLink {
+    color: #E4C576;
+    text-decoration: none;
 
-    .pageTopic{
-        display:flex;
-    }
-
-    .pageTitleActive{
-        border-bottom: none;
-    }
-
-    .description{
-        display:none;
-    }
-    .descriptionActive{
-        display:none;
-    }
-
-    .container{
-        flex-direction: column;
-        width: 70%;
-        align-items: center;
-    }
-    .item{
-        margin-top: 70px;
-        min-width: 100%;
-    }
-    .containerArrowDown{
-        display: none;
-    }
 }
 
-@media screen and (max-width:600px) {
-    .pageDescription{
-        font-size: 1em;
-        max-width: 91%;
-    }
-}
-
-@keyframes move {
-    0%{margin-top: 0;}
-    50%{margin-top: 25px;}
-    100%{margin-top: 0;}
+.signupLink:hover {
+    text-decoration: underline;
 }
